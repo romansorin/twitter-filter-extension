@@ -2,5 +2,9 @@
   "name": "Twitter Filter",
   "version": "0.01",
   "description": "Filter out select twitter content",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
   "manifest_version": 2
 }
