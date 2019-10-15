@@ -1,21 +1,19 @@
 // this is the code which will be injected into a given page...
 
-(function() {
-    const FILTERS = ['russia', 'ukraine']
+;(function () {
+  const FILTERS = ['russia', 'ukraine', 'brexit', 'biden', 'nazi']
+  const SIDEBAR_LABEL = 'Timeline: Trending now'
 
-    const trending_div = document.querySelector('[aria-label="Timeline: Trending now"]')
-    const tweets = document.querySelectorAll('article')
+  const trendingDiv = document.querySelector(`[aria-label="${SIDEBAR_LABEL}"]`)
+  const tweets = document.querySelectorAll('article')
 
-    if (trending_div !== null)
-        trending_div.remove()
-   
+  if (trendingDiv !== null) trendingDiv.remove()
 
-    for (const tweet of tweets) {
-        FILTERS.some(filter=> {
-          
-            tweet.innerText.includes(filter); tweet.remove()
-            })
-    }
-
-
-})();
+  for (const tweet of tweets) {
+    FILTERS.some(filter => {
+      if (tweet.innerText.toLowerCase().includes(filter)) {
+        tweet.remove()
+      }
+    })
+  }
+})()
