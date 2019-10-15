@@ -1,0 +1,6 @@
+{
+  "name": "Twitter Filter",
+  "version": "0.01",
+  "description": "Filter out select twitter content",
+  "manifest_version": 2
+}
