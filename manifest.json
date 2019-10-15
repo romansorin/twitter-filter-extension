@@ -3,16 +3,15 @@
   "version": "0.0.1",
   "manifest_version": 2,
   "description": "Filtering twitter stuff",
-  "homepage_url": "https://romansorin.com",
   "background": {
     "scripts": [
       "background.js"
     ],
     "persistent": true
   },
-  "browser_action": {
-    "default_title": "Filter"
-  },
+//   "browser_action": {
+//     "default_title": "Filter"
+//   },
   "permissions": [
     "https://*/*",
     "http://*/*",
